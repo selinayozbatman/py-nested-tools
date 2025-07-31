@@ -4,9 +4,9 @@ input: [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
 
 output: [1,'a','cat',2,3,'dog',4,5] '''
 
-def flatten(input_list):
+def flatten(input):
     l = []
-    for i in input_list:
+    for i in input:
         if isinstance(i, list):
             l.extend(flatten(i))
         else:
